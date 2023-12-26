@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 # Define your variables
 ###############################################
-server_url = "rk-vrit-mssql-server.database.windows.net"
-db_name = "flask-webapp-db"
-username = "sqladmin"
-password = "Abcd123456789!"
+server_url = "servername"
+db_name = "dbname"
+username = "usernmae"
+password = "password"
 ###############################################
 
 # Construct the SQLALCHEMY_DATABASE_URI using the variables
