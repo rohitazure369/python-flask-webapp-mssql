@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 # Define your variables
 ###############################################
-server_url = "rk-vrit-sql-server.database.windows.net"
-db_name = "rk-vrit-python-web-app-db"
+server_url = "rk-vrit-mssql-server.database.windows.net"
+db_name = "flask-webapp-db"
 username = "sqladmin"
 password = "Abcd123456789!"
 ###############################################
