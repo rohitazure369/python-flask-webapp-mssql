@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://sqladmin:Abcd123456789!@rk-vrit-sql-server.database.windows.net/rk-vrit-python-web-app-db?driver=SQL+Server+Native+Client+11.0'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://sqladmin:Abcd123456789!@rk-vrit-sql-server.database.windows.net/rk-vrit-python-web-app-db?driver=ODBC+Driver+17+for+SQL+Server'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
