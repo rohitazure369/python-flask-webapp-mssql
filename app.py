@@ -4,15 +4,19 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-# Replace 'your_db_name' with your actual database name
-# rk-vrit-sql-server.database.windows.net
-# rk-vrit-python-web-app-db
-# sqladmin
-# Abcd123456789!
+# Define your variables
+###############################################
+server_url = "rk-vrit-sql-server.database.windows.net"
+db_name = "rk-vrit-python-web-app-db"
+username = "sqladmin"
+password = "Abcd123456789!"
+###############################################
 
+# Construct the SQLALCHEMY_DATABASE_URI using the variables
+database_uri = f"mssql+pyodbc://{username}:{password}@{server_url}/{db_name}?driver=ODBC+Driver+17+for+SQL+Server"
 
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://sqladmin:Abcd123456789!@rk-vrit-sql-server.database.windows.net/rk-vrit-python-web-app-db?driver=ODBC+Driver+17+for+SQL+Server'
+# Assign the constructed URI to app.config
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
